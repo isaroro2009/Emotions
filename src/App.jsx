@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Mic, MicOff, Send, MessageSquare, Heart, ShieldAlert, Meh, Smile, Frown, Flame, Ghost, History, Trash2, Loader2 } from 'lucide-react';
 
 // Configuration
-const apiKey = ""; // API key is handled by the environment
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
 const App = () => {
