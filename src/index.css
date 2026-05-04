@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados para efectos Kawaii/Futuristas */
+body {
+  @apply antialiased;
+}
+
+textarea::placeholder {
+  @apply text-slate-400 italic opacity-70;
+}
+
+/* Animación suave para cuando aparecen los resultados */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: slideUp 0.5s ease-out forwards;
+}
